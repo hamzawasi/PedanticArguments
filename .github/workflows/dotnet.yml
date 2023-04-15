@@ -21,10 +21,10 @@ jobs:
       with:
         dotnet-version: 7.0.x
     - name: Restore dependencies
-      workingdirectory: ./Web/PedanticArgsGateway
+      working-directory: ./Web/PedanticArgsGateway
       run: dotnet restore
     - name: Build
-      workingdirectory: ./Web/PedanticArgsGateway
+      working-directory: ./Web/PedanticArgsGateway
       run: dotnet build --no-restore
     # - name: Test
     #   run: dotnet test --no-build --verbosity normal
