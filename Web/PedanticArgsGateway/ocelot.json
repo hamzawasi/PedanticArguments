@@ -1,4 +1,17 @@
 {
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/api/identity/{everything}",
+            "DownstreamPathTemplate": "/api/identity/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5226
+                }
+            ]
+        }
+    ],
     "GlobalConfiguration": {
         "BaseUrl": "http://localhost:5239"
     }
