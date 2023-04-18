@@ -18,7 +18,6 @@ builder.WebHost.ConfigureServices(s => {
     s.AddOcelot(builder.Configuration);
 });
 
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -32,11 +31,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
 app.UseOcelot().Wait();
-
+app.UseAuthorization();
+app.MapControllers();
 app.Run();
