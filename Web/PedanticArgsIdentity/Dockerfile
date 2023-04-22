@@ -3,9 +3,9 @@ WORKDIR /PedanticArgsIdentity
 
 COPY . ./
 
-RUN ./Web/PedanticArgsIdentity dotnet restore
+RUN sudo ./Web/PedanticArgsIdentity dotnet restore
 
-RUN ./Web/PedanticArgsIdentity dotnet publish -c Release -o out
+RUN sudo ./Web/PedanticArgsIdentity dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /PedanticArgsIdentity
