@@ -6,11 +6,11 @@ COPY . ./
 # RUN cd ./Web/PedanticArgsIdentity
 RUN ls
 
-WORKDIR /
+WORKDIR /PedanticArgsIdentity/Web/PedanticArgsIdentity
 
 RUN ls PedanticArgsIdentity/Web/PedanticArgsIdentity
 
-RUN dotnet restore "./PedanticArgsIdentity/PedanticArgsIdentity.csproj"
+RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
