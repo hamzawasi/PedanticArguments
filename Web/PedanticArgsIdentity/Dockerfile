@@ -6,6 +6,8 @@ COPY . ./
 RUN pwd
 RUN ls
 
+USER root
+
 RUN ./Web/PedanticArgsIdentity dotnet restore
 
 RUN ./Web/PedanticArgsIdentity dotnet publish -c Release -o out
