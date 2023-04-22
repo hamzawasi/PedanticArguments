@@ -6,6 +6,8 @@ on:
       - 'dev/*'
       - 'stg/*'
       - 'prd/*'
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   packages: write
