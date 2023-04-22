@@ -3,12 +3,7 @@ WORKDIR /PedanticArgsIdentity
 
 COPY . ./
 
-# RUN cd ./Web/PedanticArgsIdentity
 RUN ls
-
-WORKDIR /PedanticArgsIdentity/Web/PedanticArgsIdentity
-
-RUN ls PedanticArgsIdentity/Web/PedanticArgsIdentity
 
 RUN dotnet restore
 
