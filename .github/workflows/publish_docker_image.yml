@@ -32,8 +32,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build container
         uses: docker/build-push-action@v4
-        working-directory: ./Web/PedanticArgsIdentity
         with:
           context: .
+          file: ./Web/PedanticArgsIdentity/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
