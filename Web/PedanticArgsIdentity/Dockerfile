@@ -8,11 +8,11 @@ RUN ls
 
 WORKDIR /
 
-RUN ls
+RUN ls PedanticArgsIdentity
 
 RUN tree
 
-RUN dotnet restore
+RUN dotnet restore "./PedanticArgsIdentity/PedanticArgsIdentity.csproj"
 
 RUN dotnet publish -c Release -o out
 
