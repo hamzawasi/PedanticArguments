@@ -31,8 +31,8 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build container
-        working-directory: ./Web/PedanticArgsIdentity
         uses: docker/build-push-action@v4
+        working-directory: ./Web/PedanticArgsIdentity
         with:
           context: .
           push: true
