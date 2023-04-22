@@ -6,9 +6,11 @@ COPY . ./
 # RUN cd ./Web/PedanticArgsIdentity
 RUN ls
 
-WORKDIR /Web/PedanticArgsIdentity
+WORKDIR /
 
 RUN ls
+
+RUN tree
 
 RUN dotnet restore
 
