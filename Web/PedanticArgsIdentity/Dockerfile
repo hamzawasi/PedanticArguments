@@ -8,9 +8,7 @@ RUN ls
 
 WORKDIR /
 
-RUN ls PedanticArgsIdentity
-
-RUN tree
+RUN ls PedanticArgsIdentity/Web/PedanticArgsIdentity
 
 RUN dotnet restore "./PedanticArgsIdentity/PedanticArgsIdentity.csproj"
 
