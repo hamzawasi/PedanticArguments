@@ -3,8 +3,6 @@ WORKDIR /PedanticArgsIdentity
 
 COPY . ./
 
-RUN ls Web
-
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
