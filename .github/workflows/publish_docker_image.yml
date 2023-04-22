@@ -6,11 +6,6 @@ on:
       - 'dev/*'
       - 'stg/*'
       - 'prd/*'
-  pull_request:
-    branches: [ "main" ]
-
-# env:
-#   IMAGE_NAME: hamzawasi/pedanticargumentsidentity
 
 permissions:
   packages: write
@@ -33,12 +28,9 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: List directory contents
-        run: ls -R
       - name: Build container
         uses: docker/build-push-action@v4
         with:
           context: ./Web/PedanticArgsIdentity/
-          # file: ./Web/PedanticArgsIdentity/Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
