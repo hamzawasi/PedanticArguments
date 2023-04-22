@@ -3,8 +3,10 @@ WORKDIR /PedanticArgsIdentity
 
 COPY . ./
 
-RUN cd ./Web/PedanticArgsIdentity
+# RUN cd ./Web/PedanticArgsIdentity
 RUN ls
+
+WORKDIR /Web/PedanticArgsIdentity
 
 RUN dotnet restore
 
