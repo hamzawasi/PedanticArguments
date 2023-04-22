@@ -33,6 +33,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: List directory contents
+        run: ls -R
       - name: Build container
         uses: docker/build-push-action@v4
         with:
