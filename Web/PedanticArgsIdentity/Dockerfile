@@ -6,9 +6,11 @@ COPY . ./
 RUN pwd
 RUN ls ./Web/PedanticArgsIdentity
 
-RUN ./Web/PedanticArgsIdentity dotnet restore
+RUN cd ./Web/PedanticArgsIdentity
 
-RUN ./Web/PedanticArgsIdentity dotnet publish -c Release -o out
+RUN dotnet restore
+
+RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
 WORKDIR /PedanticArgsIdentity
