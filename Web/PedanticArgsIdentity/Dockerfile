@@ -4,9 +4,7 @@ WORKDIR /PedanticArgsIdentity
 COPY . ./
 
 RUN pwd
-RUN ls
-
-USER root
+RUN ls ./Web/PedanticArgsIdentity
 
 RUN ./Web/PedanticArgsIdentity dotnet restore
 
